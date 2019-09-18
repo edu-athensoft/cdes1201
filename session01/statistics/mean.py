@@ -5,7 +5,6 @@ try:
     numint = list(map(int, numlist))#conv to int
     import math
     print(math.fsum(numint[:]) / len(numint))
-
 except ValueError:#not num or separated by comma
     print("please enter valid numbers and separate them by space")
 except IndexError:#no input
