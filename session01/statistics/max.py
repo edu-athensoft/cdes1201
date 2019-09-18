@@ -1,9 +1,8 @@
-numstr = input("input a set of numbers separated by space: ")
+numstr = input("to find max, input a set of numbers separated by space: ")
 try:
     numlist = numstr.split( )
     numint = map(int, numlist)
     numint = list(map(int, numlist))#conv to int
-    numint[0]
     numint.sort()#min to max
     print(numint[len(numint)-1])
 except ValueError:#not num or separated by comma
