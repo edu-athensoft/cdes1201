@@ -1,9 +1,11 @@
+import math
+
 numstr = input("to find variance and standard deviation, input a set of numbers separated by space: ")
 try:
     numlist = numstr.split( )
     numint = map(int, numlist)
     numint = list(map(int, numlist))#conv to int
-    import math
+
     mean = math.fsum(numint[:]) / len(numint)
     diff = []
     i = 0
