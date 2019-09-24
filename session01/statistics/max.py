@@ -10,3 +10,5 @@ except ValueError:#not num or separated by comma
     print("please enter valid numbers and separate them by space")
 except IndexError:#no input
     print("please enter at least one number")
+except:
+    print("other error occur")
