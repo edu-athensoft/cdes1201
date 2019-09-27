@@ -15,16 +15,17 @@ try:
 
         step = (high - low + 0.0) / bins  # length of interval
         dist = Counter((float(x) - low) // step for x in iterable)  # return list for number of data in each interval
-       # return [dist[b] for b in range(bins)]
+        # return [dist[b] for b in range(bins)]
         return [dist[b] / math.fsum(dist[s] for s in range(bins)) for b in range(bins)]
 
+
     print(histogram(dataint, low, high, bins))
-   # i = 0
-   # datafre = []
-   # while i < len(dataint):
-       # datafre.append(dataint[i] / math.fsum(dataint[:]))
-       # i += 1
-   # print(datafre)
+# i = 0
+# datafre = []
+# while i < len(dataint):
+# datafre.append(dataint[i] / math.fsum(dataint[:]))
+# i += 1
+# print(datafre)
 
 except:
     print("please try again")
