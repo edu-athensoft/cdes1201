@@ -19,6 +19,8 @@ try:
         i += 1
         diff.append(square)
         var = math.fsum(diff[:])
-    print('variance is: ', var)
+    std = var ** (1 / 2)
+
+    print('standard deviation is: ', std)
 except:
     print('please try again')

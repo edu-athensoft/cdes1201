@@ -10,15 +10,8 @@ try:
             # add item to the list
             places.append(currentPlace)
     print('your data set is: ', places)
-    numint = list(map(float, places))  # conv to int
-    mean = math.fsum(numint[:]) / len(places)
-    diff = []
-    i = 0
-    while i < len(places):
-        square = (mean - float(places[i])) ** 2
-        i += 1
-        diff.append(square)
-        var = math.fsum(diff[:])
-    print('variance is: ', var)
+    num = list(map(float,places))  # conv to int
+
+    print('sum is: ', math.fsum(num[:]))
 except:
     print('please try again')
