@@ -8,6 +8,9 @@ try:
     dataint = list(map(float, datalist))
     low = float(input("please enter lower boundary"))
     high = float(input("please enter higher boundary"))
+    if high < max(dataint):
+        print('higher boundary is lower than maximum, please try again')
+        quit()
     bins = int(input("please enter number of intervals"))
 
 
@@ -22,6 +25,7 @@ try:
     print(histogram(dataint, low, high, bins))
 # i = 0
 # datafre = []
+
 # while i < len(dataint):
 # datafre.append(dataint[i] / math.fsum(dataint[:]))
 # i += 1
