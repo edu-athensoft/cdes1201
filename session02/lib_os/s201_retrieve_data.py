@@ -1,4 +1,5 @@
 # manage file and dir
+# read files from specified path
 
 import os
 
@@ -35,8 +36,31 @@ def get_data(raw_data, type='float'):
     return data
 
 
+def get_basedir():
+    base_dir = os.path.dirname(os.path.abspath(__name__))
+    return base_dir
+
+
+def get_current_path():
+    pwd = os.getcwd()
+    return pwd
+
+
+def get_father_path():
+    pwd = get_current_path()
+    father_path = os.path.abspath(os.path.dirname(pwd) + os.path.sep + ".")
+    return father_path
+
+
+def get_grader_father():
+    pwd = get_current_path()
+    grader_father = os.path.abspath(os.path.dirname(pwd) + os.path.sep + "..")
+    return grader_father
+
+
 def main():
-    path = r'D:\workspace\pycharm201803\cdes1201dataanalysis\session02\data'
+    # path = r'D:\workspace\pycharm201803\cdes1201dataanalysis\session02\data'
+    path = get_father_path() + os.path.sep + "data"
     files = get_filelist(path)
     # print(files,type(files))
 
@@ -47,5 +71,13 @@ def main():
     print(get_data(raw_data, 'int'))
 
 
+def print_dirs():
+    print("baseDir=",get_basedir())
+    print("currentPath=", get_current_path())
+    print("fatherPath=", get_father_path())
+    print("graderFather=", get_grader_father())
+
+
 if __name__ == "__main__":
     main()
+    print_dirs()
