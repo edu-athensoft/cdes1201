@@ -18,6 +18,7 @@ try:
 
         step = (high - low + 0.0) / bins  # length of interval
         dist = Counter((float(x) - low) // step for x in iterable)  # return list for number of data in each interval
+        print('dist=',dist,type(dist))
         # return [dist[b] for b in range(bins)]
         return [dist[b] / math.fsum(dist[s] for s in range(bins)) for b in range(bins)]
 
